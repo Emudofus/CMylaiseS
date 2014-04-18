@@ -1,0 +1,7 @@
+= render partial: 'layouts/content', locals: {title: t('action.credit'), content: render("form_#{APP_CONFIG['credit']['type']}")}
+
+:javascript
+	var credit_id = #{APP_CONFIG['credit']['id']},
+		credit_type = "#{APP_CONFIG['credit']['type']}",
+		credit_url = "#{credit_path}",
+		credit_points = #{APP_CONFIG['credit'][points_key]};

@@ -1,0 +1,15 @@
+fr:
+  actions:
+    article:
+      new: Nouvel article
+  activerecord:
+    attributes:
+      article:
+        title: Titre
+        body: Contenu
+    errors:
+      models:
+        account:
+          attributes:
+            account:
+              blank:

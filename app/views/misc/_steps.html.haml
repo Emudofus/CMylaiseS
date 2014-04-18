@@ -1,0 +1,6 @@
+%ul
+- steps.each_with_index do |step, i|
+	%li
+		<b>#{t('step')} #{i + 1}</b>
+		%br
+		!= I18n.interpolate(step, link_register: new_account_path, download_link: APP_CONFIG['download_link'])

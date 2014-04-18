@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ip: MyString
+  account_id: MyString
+  type: 
+  infos: MyString
+
+two:
+  ip: MyString
+  account_id: MyString
+  type: 
+  infos: MyString

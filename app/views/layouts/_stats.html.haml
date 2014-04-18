@@ -1,0 +1,8 @@
+#blockStatistiques
+  - t('topbar').each do |k, v|
+    %div{id: "statistiques" + cycle('Today', 'Yesterday', 'Total', 'Online')}
+      %span.bold.contract.grey.x-small= k
+      %span.blue.bold.contract.xx-small= v == '%logged_count%' ? logged_count : v
+  %a.social.socialTwitter{:href => "#"}
+  %a.social.socialRss{:href => "#"}
+  %a.social.socialFacebook{:href => "#"}

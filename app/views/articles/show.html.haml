@@ -1,0 +1,16 @@
+= render @article
+
+- if admin?
+	= link_to 'Edit', edit_article_path(@article)
+	\|
+	= link_to 'Delete', @article, method: :delete
+
+- if logged?
+	%h1= t('comments.title')
+
+	- if @article.comments.find_all{|comment| comment.account_id == current_account.id}.count == 0
+		= render 'comments/form'
+
+	- if @article.comments.count
+		#comments
+			= render @article.comments

@@ -1,0 +1,28 @@
+.colContent
+  = form_tag session_path, method: :post do
+    %span.blue.small= t('activerecord.attributes.account.account')
+    %br
+    = text_field_tag :login
+    %br
+    %br
+
+    %span.blue.small= t('activerecord.attributes.account.pass')
+    %br
+    = password_field_tag :password
+    %br
+    %br
+
+    .right
+      = submit_tag t('action.login'), class: 'button button-blue'
+  /
+    %br
+    %br
+    .loginForgotten
+    %a.grey.small{:href => ""} Mot de passe oublié ?
+    %br
+  %br
+  .loginRegister
+  = link_to t('actions.account.new'), new_account_path, class: 'grey small'
+  %br
+.colEnd
+  %img{:alt => "colEnd", :src => asset_path("colEnd.jpg")}

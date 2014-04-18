@@ -1,0 +1,10 @@
+%h1= @account.pseudo
+
+- if admin?
+	<b>#{APP_CONFIG['points']['name']}</b>: #{@account.points}
+	%br
+	=link_to 'Logs', account_logs_path(@account)
+	%br
+
+- if @account.characters.count != 0
+	= render partial: 'characters/list', locals: {characters: @account.characters}

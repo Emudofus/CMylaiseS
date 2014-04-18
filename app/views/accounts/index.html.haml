@@ -1,0 +1,26 @@
+%h1= t('accounts.title')
+
+= form_tag accounts_path, method: :get do
+	%fieldset(style="margin-left: 8%; width: 50%")
+		%legend= t('search')
+		= text_field_tag :q, params[:q], placeholder: t('activerecord.attributes.account.nickname')
+		= submit_tag t('submit')
+%br
+
+%table(align="center" border="1")
+	%thead
+		%td Id
+		%td= t('activerecord.attributes.account.nickname')
+		%td= t('activerecord.attributes.account.role')
+		%td= APP_CONFIG['points']['name']
+		%td= t('activerecord.attributes.account.creation_date')
+	%tbody
+		- @accounts.each do |account|
+			%td= account.id
+			%td= link_to account.nickname, account
+			%td= account.role_s
+			%td= account.total_tokens
+			%td= account.creation_date
+	
+
+= will_paginate @accounts, params: {q: params[:q]}

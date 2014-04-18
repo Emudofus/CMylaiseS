@@ -1,0 +1,7 @@
+%table
+	%tr
+	- screens.each do |screen|
+		%td
+			.screen= link_to image_tag(screen.image.url, width: '120px', height: '120px'), screen.image.url
+		- unless screen == screens.last #only if not the last.
+			= cycle('', '', raw('</tr><tr>'))

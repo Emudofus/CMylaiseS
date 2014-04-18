@@ -1,0 +1,30 @@
+fr:
+  actions:
+    account:
+      new: Inscription
+  activerecord:
+    attributes:
+      account:
+        account: Nom de compte
+        pseudo: Pseudo (visible)
+        pass: Mot de passe
+        level: Niveau
+        email: E-mail
+        question: Question secrète
+        reponse: Réponse secrète
+        banned: Banni
+    errors:
+      models:
+        account:
+          attributes:
+            account:
+              blank: Vous devez donner un nom de compte
+              taken: Ce nom de compte est déjà utilisé
+            email:
+              blank: Vous devez donner une adresse e-mail
+              taken: Cette adresse e-mail est déjà utilisée
+            Pseudo:
+              blank: Vous devez donner un pseudo
+              taken: Ce pseudo est déjà utilisé
+            pass:
+              blank: Vous devez donner un mot de passe

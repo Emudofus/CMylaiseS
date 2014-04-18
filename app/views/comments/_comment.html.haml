@@ -1,0 +1,10 @@
+.comment
+	%i.author
+		!= t('comments.by', account: link_to(comment.account.try(:pseudo) || '?', comment.account))
+		- if comment.created_at
+			&nbsp;-&nbsp;
+			!= t('comments.date', time_ago: distance_of_time_in_words_to_now(comment.created_at))
+		- if admin?
+			&nbsp;-&nbsp;
+			= link_to t('delete'), comment, method: :delete
+	= simple_format comment.body

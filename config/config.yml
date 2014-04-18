@@ -1,0 +1,53 @@
+vote:
+  #points par vote
+  points: 5
+  #points par vote pour les VIP
+  points_vip: 10
+  # RPG paradize id
+  id: 5
+
+credit:
+  #moyen de paiement, supporté : star (Starpass)
+  type: star
+  #id (idd chez starpass)
+  id: 85982
+  #points par créditage
+  points: 100
+  #points par créditage pour vip
+  points_vip: 105
+
+points:
+  #nom de la monnaie (attention à la taille !)
+  name: Ogrines
+
+vip:
+  #cout pour devenir VIP
+  cost: 15
+  #ID du titre à donner au membre
+  title: ~
+
+#titre du site
+title: Mylaise
+#adresse du forum
+board: http://forum.mylaise.fr
+#lien de téléchargement de l'uplauncher
+download_link: http://dl.mylaise.fr/upl.zip
+
+
+
+
+
+
+
+#Psych example.
+# defaults: &DEFAULTS
+  # audiocast_uri_format: http://blablalba/blabbitybla/yadda
+
+# development:
+  # <<: *DEFAULTS
+
+# test:
+  # <<: *DEFAULTS
+
+# production:
+  # <<: *DEFAULTS

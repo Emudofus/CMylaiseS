@@ -1,0 +1,9 @@
+//%h1 Listing articles
+
+
+= render @articles
+
+- if admin?
+	= link_to 'New Article', new_article_path
+
+= will_paginate @articles

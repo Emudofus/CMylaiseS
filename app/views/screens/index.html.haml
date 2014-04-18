@@ -1,0 +1,7 @@
+= render partial: 'layouts/content', locals: {title: t('screens.title'), |
+  content: render(partial: 'list', locals: {screens: @screens})} |
+
+
+- if admin?
+	%br
+	= link_to 'New Screen', new_screen_path

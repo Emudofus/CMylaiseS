@@ -1,0 +1,15 @@
+%br
+Devenir VIP sur <b>#{APP_CONFIG['name']}</b> vous apportera de nombreux avantages !
+%br
+Plus de points par votes, un [VIP] sur le personnage de votre choix personnage, des réductions et plus en jeu !
+%br
+%br
+Vous devrez choisir le personnage dans votre #{link_to 'profil', account_path(current_account)}.
+%br
+(il recevra un titre ainsi que la balise <b>[VIP]</b>)
+%br
+%br
+Pour seulement <b>#{APP_CONFIG['vip']['cost']} #{APP_CONFIG['points']['name']}</b>, profitez de ces avantages !
+- if current_account.points >= APP_CONFIG['vip']['cost']
+	%br
+	= link_to t('profile.vip'), vip_path, method: :post

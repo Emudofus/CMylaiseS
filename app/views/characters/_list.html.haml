@@ -1,0 +1,15 @@
+%h3= t('characters.title')
+
+%table(style="border: 1px solid black; width: 90%;")
+	%tr
+		- characters.each do |character|
+			%td(style="width: #{100 / characters.count};")
+				%h4
+					= character.name
+				= image_tag(character.icon_path, alt: "#{character.breed} #{character.gender}")
+
+				%br
+				<b>#{t('activerecord.attributes.character.level')}</b>: #{character.level}
+				- if @account && current_account == @account and character != @account.main_character
+					%br
+					%b= link_to t('profile.select_main_char'), main_char_path({character: character.guid})

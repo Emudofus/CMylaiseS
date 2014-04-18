@@ -1,0 +1,17 @@
+fr:
+  breed:
+    '1':  Feca
+    '2':  Osamodas
+    '3':  Enutrof
+    '4':  Sram
+    '5':  Xelor
+    '6':  Ecaflip
+    '7':  Eniripsa
+    '8':  Iop
+    '9':  Cra
+    '10': Sadida
+    '11': Sacrieur
+    '12': Pandawa
+  gender:
+    '0': Mâle
+    '1': Femelle

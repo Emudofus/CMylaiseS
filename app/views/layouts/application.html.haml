@@ -1,0 +1,45 @@
+!!!
+%html{:lang => "fr", "xml:lang" => "fr", :xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %title= APP_CONFIG['title']
+    =stylesheet_link_tag  "application", :media => "all"
+    =csrf_meta_tag
+  %body
+    = flash[:notice]
+    #blockBody
+      = render 'layouts/stats'
+      #blockHeader(onclick="window.location = '#{root_url}'")
+      = render 'layouts/block_left'
+      #blockRight
+        = render 'layouts/menu'
+        .floatClear
+        %span#page-top
+        #colLeft
+          .colTitle
+            %img{:alt => "Actualités", :src => asset_path("blockTitles/newsTitle.jpg")}/
+          .colContent
+            = yield
+          .colEnd
+            %img{:alt => "colEnd", :src => asset_path("colEnd.jpg")}/
+        #colRight
+          .colTitle
+            %img{:alt => "Compte", :src => asset_path("blockTitles/loginTitle.jpg")}/
+          - if current_account
+            = render 'layouts/user'
+          - else
+            = render 'layouts/form_login'
+          %br
+          /= render 'layouts/poll'
+    .floatClear
+      %br
+      %br
+    %center
+      %br
+      %br
+      .footerDivider
+      %br
+      %br
+      %br
+    / FOOTER
+    / Code by Vendethiel
+    =javascript_include_tag "application"

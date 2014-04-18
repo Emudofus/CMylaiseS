@@ -1,0 +1,5 @@
+/ if you ever come back to this cms : use `render abc do` + `yield` in the partial
+= render partial: 'layouts/content', locals: {title: article.title, |
+  content: article.body.gsub("\n", "<br>").html_safe, img: true, |
+  infos: "Publié par #{article.account.pseudo || '?'} le #{article.created_at.strftime('%d/%m/%Y')}", |
+  bottom: link_to(article.comments.length.to_s + ' ' + t('comments._title', count: article.comments.length), article)} |

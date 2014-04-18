@@ -1,0 +1,7 @@
+= simple_form_for @article do |f|
+  %table
+    = f.input :title
+    = f.input :body
+
+    %tr
+      %td= f.submit t('action.save')

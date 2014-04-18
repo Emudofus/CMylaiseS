@@ -1,0 +1,26 @@
+#blockLeft
+  .leftTitles.leftTitleServeur
+  = render 'layouts/left_server'
+  %br
+  .leftTitles.leftTitleVotes
+  .left
+    = link_to 'Vote', vote_path, id: 'leftImgVotes'
+    %p
+    /
+      %p
+        %span.leftBlue Informations
+        %br
+        Au bout de 15 votes, 1 point est automatiquement crédité sur votre compte en récompense de votre fidélité.
+        %br
+        Les points sont, par la suite, utilisables en boutique.
+  %br
+  /
+    .leftTitles.leftTitlePartenaires
+    .left
+      #leftImgPartenairesOgame
+        %a.leftButtons{:href => "#", :title => "OGame"}
+      #leftImgPartenairesFacebook
+        %a.leftButtons{:href => "#", :title => "Facebook"}
+      %br
+    %br
+    %br

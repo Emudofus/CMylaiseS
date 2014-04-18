@@ -1,0 +1,39 @@
+#blockMenu
+  %span#menuLeftBg
+  %span#menuRightBg
+  /
+    currently commented because it's better
+    #blockSearch
+      %input#menuSearch{:name => "search", :onblur => "if(this.value=='') this.value='Rechercher...';", :onfocus => "if(this.value=='Rechercher...') this.value='';", :type => "text", :value => "Rechercher..."}/
+  #menu
+    .menu
+      = link_to 'Index', root_url, class: 'menuButton'
+    .menu
+      = link_to t('join_us.title'), join_us_path, class: 'menuButton'
+    - if vote?
+      .menu
+        = link_to 'Vote', vote_path, class: 'menuButton'
+    .menu
+      - if current_account
+        = link_to t('profile.title'), account_path(current_account), class: 'menuButton'
+      - else
+        = link_to t('actions.account.new'), new_account_path, class: 'menuButton'
+    .menu
+      %a.menuButton{:href => "#"} Ladders
+      %div
+        %span.submenuLeftBg
+        %span.submenuCenterBg
+          %img{:alt => "Puce", :height => "12", :src => asset_path("menu/submenuPuce.png"), :width => "20"}
+          = link_to t('ladder.characters'), ladder_characters_path
+          /%img{:alt => "Puce", :height => "12", :src => asset_path("menu/submenuPuce.png"), :width => "20"}
+          /= link_to t('ladder.guilds'), ladder_guilds_path
+          %img{:alt => "Puce", :height => "12", :src => asset_path("menu/submenuPuce.png"), :width => "20"}
+          = link_to t('ladder.votes'), ladder_votes_path
+        %span.submenuRightBg
+    .menu
+      /= link_to t(), , class: 'menuButton'
+    .menu
+      /= link_to t(), , class: 'menuButton'
+    .menu
+      = link_to t('screens.title'), screens_path, class: 'menuButton'
+/ MENU

@@ -1,0 +1,91 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+fr:
+  logged:
+    as: Connecté en tant que <b>%{pseudo}</b>
+    out: Vous êtes déconnecté.
+  log:
+    actions: Vous pouvez vous %{register}, ou vous %{login} si vous avez un compte
+    register: Inscrire
+    login: Connecter
+    disconnect: Déconnexion
+  successfully:
+    created:
+      account: Votre compte a été créé avec succès !
+    logged_in: Connexion effectuée avec succès !
+    disconnected: Déconnexion effectuée avec succès !
+    credit: Créditage effectué avec succès !
+  failed:
+    login: "Connexion impossible, combinaison nom d'utilisateur / mot de passe incorrect."
+    credit: Créditage impossible, vérifiez votre code.
+  require:
+    level:
+      guest: Vous devez être déconnecté
+      logged: Vous devez être connecté
+      vip: Vous devez être VIP
+      admin: Vous devez être administrateur
+  action:
+    login: Connexion !
+    save: Valider
+    credit: Créditer votre compte
+    vote: Voter
+  submit: Valider
+  delete: Supprimer
+  step: Étape
+  tip: Astuce
+  home: Accueil
+  credit:
+    number: Numéro (Appel)
+    sms: Numéro (SMS)
+    title: Créditage
+    gain: Vous allez créditer votre compte pour %{points} points.
+    reconnect_to_gain: 'Attention : vous devrez peut-être vous reconnecter pour que vos points soient comptés.'
+  vote:
+    title: Voter
+    waiting: Voter (veuillez attendre les 2h)
+  join_us:
+    title: Nous rejoindre
+    steps:
+      - <a href="%{link_register}">Inscrivez-vous</a> si ce n'est pas encore le cas.
+      - Téléchargez notre uplauncher <a href="%{download_link}" TARGET="_blank">ici</a>
+      - Connectez-vous !
+  #"
+  screens:
+    title: Screenshots
+  board:
+    title: Forum
+  ladder:
+    empty: Ladder vide
+    characters: Personnages
+    guilds: Guildes
+    votes: Votes
+  comments:
+    title: Commentaires
+    _title:
+      zero: Commentaire
+      one: Commentaire
+      other: Commentaires
+    by: Par %{account}
+    date: Il y a %{time_ago}
+  characters:
+    title: Personnage(s)
+    singular: Personnage
+  profile:
+    title: Profil
+    vip: Devenir VIP
+    select_main_char: Choisir comme personnage principal
+  server:
+    -
+      'Niveau de départ': 100
+      'Niveau maximal': 300
+    -
+      'Rate XP': x10
+      'Rate Kamas': x30
+      'Rate Drops': x10
+      'Rate Honor': x5
+  topbar:
+    "AUJOURD'HUI": 150
+    HIER: 130
+    DEMAIN: 9001
+    'EN LIGNE': '%logged_count%'

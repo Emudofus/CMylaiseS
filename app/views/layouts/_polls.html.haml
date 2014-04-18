@@ -1,0 +1,28 @@
+.colTitle
+  %img{:alt => "Sondages", :src => asset_path("blockTitles/pollsTitle.jpg")}/
+.colContent
+  %span.blue.x-large Titre du sondage ?
+  %br/
+  %br/
+  %table
+    %tr.pollsTdHeight
+      %td.pollsTdWidth
+        %input{:name => "poll", :type => "radio"}/
+      %td.d-grey Lorem ipsum dolor sit amet
+    %tr.pollsTdHeight
+      %td.pollsTdWidth
+        %input{:checked => "checked", :name => "poll", :type => "radio"}/
+      %td.d-grey Consectetur adipiscing elit
+    %tr.pollsTdHeight
+      %td.pollsTdWidth
+        %input{:name => "poll", :type => "radio"}/
+      %td.d-grey Ut convallis ultrices hendre
+    %tr.pollsTdHeight
+      %td.pollsTdWidth
+        %input{:name => "poll", :type => "radio"}/
+      %td.d-grey Donec egestas posuere nisi
+  %br/
+  .right
+    %input.button.button-blue{:type => "submit", :value => "Voter"}/
+.colEnd
+  %img{:alt => "colEnd", :src => asset_path("colEnd.jpg")}/

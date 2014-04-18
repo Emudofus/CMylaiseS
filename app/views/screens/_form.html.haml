@@ -1,0 +1,7 @@
+= simple_form_for(@screen) do |f|
+	%table
+		= f.input :image, as: :file
+		
+		%tr
+			%td
+				= f.submit

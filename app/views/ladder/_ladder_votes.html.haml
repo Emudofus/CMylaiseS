@@ -1,0 +1,11 @@
+%thead
+	%tr
+		%th Place
+		%th Pseudo
+		%th Votes
+%tbody
+	- @records.each_with_index do |account, i|
+		%tr
+			%td= @start + i
+			%td= account.pseudo
+			%td= account.count_vote

@@ -1,0 +1,10 @@
+%table
+	=connected_table_line 'cadeau', "#{APP_CONFIG['points']['name']}: #{current_account.total_tokens}"
+	=connected_table_line 'plus', link_to(t('credit.title'), code_path)
+	=connected_table_line 'boutique', link_to(t('shop.title'), shop_path)
+	=connected_table_line 'profil', "Profil"
+	- if vote?
+		=connected_table_line 'vote', link_to(t('vote.title'), vote_path)
+	- else
+		=connected_table_line 'vote', t('vote.waiting')
+	=connected_table_line 'disconnect', link_to(t('log.disconnect'), session_path, method: :delete)

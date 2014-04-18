@@ -1,0 +1,12 @@
+.left.leftServeur
+  - t('server').each do |server_infos|
+    %table
+      - server_infos.each do |k, v|
+        %tr
+          %td.leftBlue #{k} : 
+          %td.leftRight= v
+  %span.serveurType DOFUS 1.29
+  %span.serveurStatusOnline En ligne
+  .serveurBarBg
+    .serveurBar{:style => "width:#{logged_count}px"}
+    .serveurPlayers #{logged_count} / 200

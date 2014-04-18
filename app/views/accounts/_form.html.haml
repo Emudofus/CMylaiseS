@@ -1,0 +1,12 @@
+= simple_form_for @account do |f|
+  %table
+    = f.input :pseudo
+    = f.input :account
+    = f.input :pass, as: :password
+    = f.input :pass_confirmation, as: :password
+    = f.input :email
+    = f.input :question
+    = f.input :reponse
+
+    %tr
+      %td= f.submit t('action.save')

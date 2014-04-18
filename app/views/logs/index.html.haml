@@ -1,0 +1,27 @@
+- if @account
+	%h1 Logs of #{link_to @account.nickname, @account}
+- else
+	%h1 Anonymous logs
+
+= form_tag account_logs_path(@account ? @account.id : nil), method: :get do
+	%fieldset(width="50%")
+		= select_tag :type, options_for_select(['', 'credit', 'vote'], params[:type])
+		= text_field_tag :ip, params[:ip] || 'Ip'
+		= hidden_field_tag :page, params[:page] || '1'
+		= submit_tag "Submit"
+
+%table
+	%tr
+		%th Date
+		%th Ip
+		%th Type
+		%th Infos
+
+	- @logs.each do |log|
+		%tr
+			%td= log.created_at
+			%td= log.ip
+			%td= log.type
+			%td= log.infos
+
+= will_paginate @logs, params: {type: params[:type], ip: params[:ip]}

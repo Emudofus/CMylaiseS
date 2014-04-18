@@ -1,0 +1,18 @@
+.colContent.userPanel
+  %ul
+    %li!= t('logged.as', pseudo: current_account.pseudo)
+    %li!= link_to t('profile.title'), current_account
+    %li #{APP_CONFIG['points']['name']}: <b>#{current_account.points || 0}</b>
+    %li= link_to t('action.credit'), code_path
+    - if vote?
+      %li= link_to t('action.vote'), vote_path
+    %li
+      - if vip?
+        %b VIP
+      - else
+        %b= link_to t('profile.vip'), vip_path
+    %li= link_to t('log.disconnect'), session_path, method: :delete
+    - if current_account.main_character
+      %li #{t('characters.singular')}: <b>#{current_account.main_character.name}</b>
+.colEnd
+  %img{:alt => "colEnd", :src => asset_path("colEnd.jpg")}/

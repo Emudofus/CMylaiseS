@@ -1,0 +1,17 @@
+%thead
+	%tr
+		%th Place
+		%th Nom
+		%th Niveau
+		%th Compte
+%tbody
+	- @records.each_with_index do |character, i|
+		%tr
+			%td= @start + i
+			%td= character.name
+			%td= character.level
+			%td
+				- if character.account
+					= link_to character.account.pseudo || '?', character.account
+				- else
+					?
